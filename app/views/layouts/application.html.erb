@@ -13,6 +13,9 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <% if current_employee %>
+    <%= link_to "Logout", destroy_employee_session_path, method: :delete %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

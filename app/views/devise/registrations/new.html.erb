@@ -21,6 +21,31 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autocomplete: "name" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :nationality %><br />
+    <%= f.text_field :nationality, autocomplete: "nationality" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :birth_date %><br />
+    <%= f.date_field :birth_date, autocomplete: "birth_date" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :department_id %><br />
+    <%= f.collection_select :department_id, Department.all, :id, :name, autocomplete: "department_id" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :manager_id %><br />
+    <%= f.collection_select :manager_id, Employee.all, :id, :name, autocomplete: "manager_id" %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
