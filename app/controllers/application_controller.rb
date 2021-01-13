@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
                         :password_confirmation, 
                         :name,
                         :nationality, 
+                        :position,
                         :birth_date, 
                         :department_id, 
                         :manager_id)

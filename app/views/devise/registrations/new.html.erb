@@ -32,6 +32,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :position %><br />
+    <%= f.text_field :position, autocomplete: "position" %>
+  </div>
+
+  <div class="field">
     <%= f.label :birth_date %><br />
     <%= f.date_field :birth_date, autocomplete: "birth_date" %>
   </div>
