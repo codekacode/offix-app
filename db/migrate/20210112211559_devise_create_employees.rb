@@ -36,7 +36,7 @@ class DeviseCreateEmployees < ActiveRecord::Migration[6.1]
       t.string :nationality
       t.date :birth_date
       t.references :department, null: false, foreign_key: true
-      t.references :manager,  index: true
+      t.references :manager, index: true
 
       t.timestamps null: false
     end

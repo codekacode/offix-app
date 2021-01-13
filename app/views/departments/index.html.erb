@@ -1,0 +1,12 @@
+<h1>Departments</h1>
+<ul>
+    <% @departments.each do |department| %>
+    <li>
+        <%= link_to department_path(department.id) do %>
+        <% image_tag(department.cover) if department.cover.attached? %>
+        <h2><%= department.name %></h2>
+        <p><%= department.employees.size %></p>
+        <% end %>
+    </li>
+    <% end %>
+</ul>

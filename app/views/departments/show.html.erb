@@ -1,0 +1,10 @@
+<h1><%= department.name %></h1>
+<p><%= department.description %></p>
+<h2>Members</h2>
+    <ul>
+        <% @department.employees.each do |employee| %>
+            <li><%= image_tag(employee.avatar) if employee.avatar.attached? %></li>
+            <p><%= department.employee.name %></p>
+            <p><%= </p>
+        <% end %>
+    </ul>
